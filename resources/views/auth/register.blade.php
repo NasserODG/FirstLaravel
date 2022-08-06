@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Section: Design Block -->
-<section class="text-center text-lg-start" style="width: 55%; margin-left:23%; margin-top:3%;">
+<section class="text-center text-lg-start" style="width: 53%; margin-left:23%; margin-top:3%;">
   <style>
     .cascading-right {
       margin-right: -50px;
@@ -12,6 +12,13 @@
       .cascading-right {
         margin-right: 0;
       }
+    }
+
+    label{
+        font-size: 20px;
+    }
+    p{
+        font-size: 20px;
     }
 
 
