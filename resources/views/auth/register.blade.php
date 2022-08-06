@@ -82,16 +82,27 @@
               </div>
 
               <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="form3Example4" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" required />
-                <label class="form-label" for="password">Mot de passe</label>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="password" id="form3Example4" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" required />
+                    <label class="form-label" for="password">Mot de passe</label>
 
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                  @error('password')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                  @enderror
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" required>
+                    <label for="password-confirm" class="form-label">{{ __('Confirmez mdp') }}</label>
+
+                  </div>
+                </div>
               </div>
 
               
