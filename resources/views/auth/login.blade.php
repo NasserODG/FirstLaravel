@@ -19,6 +19,10 @@
     p{
         font-size: 20px;
     }
+    
+    a.tex:hover{
+        color: blue;
+    }
 
 
   </style>
@@ -94,13 +98,16 @@
 
               <!-- Submit button -->
             <div class="row mb-0">
-                <div class="col-md-6 offset-md-4 mx-auto">
-                    <button type="submit" class="btn btn-outline-primary" style=" font-family: Lato; font-size: 150%; text-align:center; color:black;">
+                <div class="col-md-6 offset-md-4 mx-0">
+                    <button type="submit" class="btn btn-primary" style=" font-family: Lato; font-size: 150%; text-align:center;">
                         {{ __("Se Connecter") }}
                     </button>
+                    
+                </div>
+                <div class="col-md-6 offset-md-4 mx-0">
                     @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
+                        <a class="btn btn-link tex" href="{{ route('password.request') }}" style="text-decoration: none; font-size: 17px;">
+                            {{ __('Mot de passe oublié?') }}
                         </a>
                     @endif
                 </div>

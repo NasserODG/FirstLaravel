@@ -34,8 +34,12 @@
             ">
           <div class="card-body p-5 shadow-5 text-center">
             <h2 class="fw-bold mb-5">Inscrivez-vous maintenant</h2>
+
+            
             <form method="POST" action="{{ route('register') }}">
-              <!-- 2 column grid layout with text inputs for the first and last names -->
+
+              @csrf
+              
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
@@ -43,10 +47,10 @@
                     <label class="form-label " for="Prénom">Prénom</label>
 
                                 @error('Prénom')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                                @enderror
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
@@ -90,22 +94,18 @@
                                 @enderror
               </div>
 
-              <!-- Checkbox -->
-              <div class="form-check d-flex justify-content-center mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                <label class="form-check-label" for="form2Example33">
-                  Souscrivez à notre newsletter
-                </label>
-              </div>
+              
 
               <!-- Submit button -->
               <div class="row mb-0">
                             <div class="col-md-6 offset-md-4 mx-auto">
-                                <button type="submit" class="btn btn-outline-primary" style=" font-family: Lato; font-size: 150%; text-align:center; color:black;">
+                                <button type="submit" class="btn btn-primary" style=" font-family: Lato; font-size: 150%; text-align:center;">
                                     {{ __("S'Inscrire") }}
                                 </button>
                             </div>
                         </div>
+
+                        <br>
 
               <!-- Register buttons -->
               <div class="text-center">
